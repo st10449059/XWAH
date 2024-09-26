@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <style> 
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+        display: flex;
+        position: sticky;
+        align-items: center;
+        justify-content: space-between;
+        top:0px;
+        background: black;
+        background-blend-mode: darken;
+        background-size: cover;
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-list li {
+        margin-right: 20px;
+    }
+
+    .nav-list li:last-child{
+        margin-right: 0;
+    }
+
+    .nav-list li a{
+        text-decoration: none ;
+        color: white;
+        font-size: 18px;
+        transition: color 0.3 ease-in-out;
+    }
+
+    .nav-list li a:hover{
+        color: yellow;
+    }
+
+    .rightNav{
+        text-align: right;
+    }
+
+    .btn{
+        background-color: yellow;
+        color: black;
+        border:  none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3 ease-in-out;
+    }
+
+    .btn:hover{
+        background-color: black;
+        color: yellow;
+
+    }
+
+    h1{
+        text-align: center;
+        color: white;
+    }
+
+    h2{
+        text-align: center;
+        color: white;
+
+    }
+
+    .center1{
+        text-align: center;
+        background-color: gold;
+        width: 50%;
+        border: 15px gold;
+        padding: 10px;
+        margin: auto;
+        
+    }
+   
+
+   
+    .center2{
+        background-color: white;
+        width: 6%;
+        border: 15px gold;
+        padding: 10px;
+        margin: auto;
+        
+    }
+     
+    ul.a{
+        list-style: square;
+        list-style-position: inside;
+    }
+
+   img{
+    height: 250px;
+    width: 450px;
+    border: 1px black;
+   }
+   #left{
+    float: left;
+   }
+   #right{
+    float:right;
+   }
+
+   body{
+    background-color: black;
+   }
+    
+   .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gold; 
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+   }
+   .button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+/* Refrence: W3 Schools, 2024. Learn to Code. [Online] 
+  Available at: https://www.w3schools.com 
+  [Accessed September 2024].
+  Geeks for Geeks, 2008. Data Structure & Algorithms. [Online] 
+  Available at: https://www.geeksforgeeks.org
+  [Accessed September 2024].
+  Udacity, 2011. Introduction to Javascript. [Online] 
+  Available at: https://www.udacity.com/course/intro-to-javascript--cd2073
+  [Accessed September 2024].
+  Code Academy, 2011. HTML & CSS. [Online] 
+  Available at: https://www.codecademy.com/?g_network=g&g_productchannel=&g_adid=528849219280&g_locinterest=&g_keyword=codecademy&g_acctid=243-039-7011&g_adtype=&g_keywordid=kwd-41065460761&g_ifcreative=&g_campaign=account&g_locphysical=9053244&g_adgroupid=70492864474&g_
+  [Accessed September 2024].*/
+
+       
+    </style>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="HomePage.html">Home page</a> </li>
+            <li><a href="Courses.html">Courses</a></li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+        </ul>
+    </nav>
+</head>
+
+
+<body>
+    <h1>Six week short Courses</h1>
+    <p>
+        <h2>Child minding</h2>
+        <img src="./_Images/Child.jpg" alt="help1" id="left">
+        <img src="./_Images/Child.jpg" alt="help1" id="right">
+            <div class="center1">
+                
+            <p>
+                Purpose: To provide basic child and baby care
+            </p>
+
+            <p>
+                Content:
+                <ul class="a">
+                    <li>Birth to six month old baby needs</li>
+                    <li>Seven month to one year old needs</li>
+                    <li>Toddler needs</li>
+                    <li>Educational toys</li>
+                </ul> 
+                
+            </p> 
+                <p>
+                    Fees: R750
+                </p>
+                <div class="center">
+                    <button class="button1">
+                        <a href="ChildMinding.html">
+                            More information
+                        </a>
+                    </button>
+                </div>
+
+            </div>
+    
+           
+
+
+        <h2>Cooking</h2>
+        <img src="./_Images/cooking.jpg" alt="help1" id="left">
+        <img src="./_Images/cooking.jpg" alt="help1" id="right">
+            <div class="center1">
+            <P>
+                Purpose: To prepare and cook nutritious family meals
+            </P>
+
+            <p>
+                Content:
+                <ul class="a">
+                    <li>Nutritional requirements for a healthy body</li>
+                    <li>Types of protein, carbohydrates and vegtables</li>
+                    <li>Planing meals</li>
+                    <li>Preperation and cooking of meals</li>
+                </ul>
+            </p>
+            <p>
+                Fees: R750
+            </p>
+            <div class="center">
+                <button class="button1">
+                    <a href="Cooking.html">
+                        More information
+                    </a>
+                </button>
+            </div>
+            </div>
+            
+
+
+
+        <h2>Garden maintenace</h2>
+        <img src="./_Images/Garden1.jpg" alt="help1" id="left">
+        <img src="./_Images/Garden1.jpg" alt="help1" id="right">
+            <div class="center1">
+                <P>
+                    Purpose: To provide basic knowledge of watering, pruning and planting in a domestic garden
+                </P>
+
+                <P>
+                    Content:
+                    <ul class="a">
+                        <li>Water restrictions and the watering requirments of indigenous and exotic plants</li>
+                        <li>Pruning and propagation of plants</li>
+                        <li>Planting techniques for diffrent plant types</li>
+                    </ul>
+                </P>
+                <P>
+                    Fees: R750
+                </P>
+                <div class="center">
+                    <button class="button1">
+                        <a href="GardenMAIN.html">
+                            More information
+                        </a>
+                    </button>
+                </div>
+            </div>
+           
+    </p>
+
+
+    <h1>Six month courses</h1>
+    <p>
+        <h2>First Aid</h2>
+        <img src="./_Images/FirstAid.jpg" alt="help1" id="left">
+        <img src="./_Images/FirstAid.jpg" alt="help1" id="right">
+            <div class="center1">
+                <p>
+                    Purpose: To provide first aid awareness and basic life support
+                </p>
+                    Content:
+                    <ul class="a">
+                        <li>Wounds and bleeding</li>
+                        <li>Burns and fractures</li>
+                        <li>Emergency scene management</li>
+                        <li>Cardio-Pulmonary Resuscitation (CPR)</li>
+                        <li>Respiratory distress e.g., Choking, blocked airway</li>
+                    </ul>
+
+                <P>
+                    Fees: R1500
+                </P>
+                <div class="center">
+                    <button class="button1">
+                        <a href="FirstAid.html">
+                            More information
+                        </a>
+                    </button>
+                </div>
+            </div>
+            
+
+
+        <h2>Sewing</h2>
+        <img src="./_Images/Sewing.jpg" alt="help1" id="left">
+        <img src="./_Images/Sewing.jpg" alt="help1" id="right">
+             <div class="center1">
+                <p>
+                    Purpose: To provide alterations and new garment tailoring services
+                </p>
+
+                <p>
+                    Content:
+                    <ul class="a">
+                        <li>Types of stitches</li>
+                        <li>Threading a sewing machine</li>
+                        <li>Sewing buttons, zips, hems and seams</li>
+                        <li>Alterations</li>
+                        <li>Designing and sewing new garments</li>
+                    </ul>
+                </p>
+                <P>
+                    Fees: R1500
+                </P>
+                <div class="center">
+                    <button class="button1">
+                        <a href="Sewing.html">
+                            More information
+                        </a>
+                    </button>
+                </div>
+                
+                
+             </div>
+             
+
+
+        <h2>Landscaping</h2>
+        <img src="./_Images/Landscaping.jpg" alt="help1" id="left">
+        <img src="./_Images/Landscaping.jpg" alt="help1" id="right">
+            <div class="center1">
+                <p>
+                    Purpose: To provide landscaping services for new and established gardens 
+                </p>
+
+                <p>
+                    Content:
+                    <ul class="a">
+                        <li>Indigenous and exotic plants and trees</li>
+                        <li>Fixed structures (fountains, statues, benches, tables, built-in braai) </li>
+                        <li>Balancing of plants and trees in a garden</li>
+                        <li>Aesthetics of plant shapes and colours</li>
+                        <li>Garden layout</li>
+                    </ul>
+                </p>
+
+                <P>
+                    Fees: R1500
+                </P>
+                <div class="center">
+                    <button class="button1">
+                        <a href="LandScaping.html">
+                            More information
+                        </a>
+                    </button>
+                </div>
+            </div>
+           
+
+
+        <h2>Life Skills</h2>
+        <img src="./_Images/LifeSkills.jpg" alt="help1" id="left">
+        <img src="./_Images/LifeSkills.jpg" alt="help1" id="right">
+            <div class="center1">
+                <p>
+                    Purpose: To provide skills to navigate basic life necessities
+                </p>
+
+                <p>
+                    Content:
+                    <ul class="a">
+                        <li>Opening a bank account</li>
+                        <li>Basic labour law (know your rights)</li>
+                        <li>Basic reading and writing literacy </li>
+                        <li>Basic numeric literacy</li>
+                    </ul>
+                </p>
+
+                <P>
+                    Fees: R1500
+                </P>
+                <div class="center">
+                    <button class="button1">
+                        <a href="LifeSkills.html">
+                            More information
+                        </a>
+                    </button>
+                </div>
+            </div>
+            
+     </p>
+
+</body>
+</html>

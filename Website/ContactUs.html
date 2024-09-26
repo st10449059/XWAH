@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .venue {
+            margin-bottom: 15px;
+        }
+        .venue-address {
+            cursor: pointer;
+            color: blue;
+            text-decoration: underline;
+        }
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+        body{
+           font-family: Arial, Helvetica, sans-serif;
+       }
+   
+       .navbar {
+           display: flex;
+           position: sticky;
+           align-items: center;
+           justify-content: space-between;
+           top:0px;
+           background: black;
+           background-blend-mode: darken;
+           background-size: cover;
+           color: white;
+           padding: 10px 20px;
+       }
+   
+       .nav-list {
+           display: flex;
+           list-style: none;
+       }
+   
+       .nav-list li {
+           margin-right: 20px;
+       }
+       .nav-list li:last-child{
+           margin-right: 0;
+       }
+   
+       .nav-list li a{
+           text-decoration: none ;
+           color: white;
+           font-size: 18px;
+           transition: color 0.3 ease-in-out;
+       }
+   
+       .nav-list li a:hover{
+           color: yellow;
+       }
+   
+       .rightNav{
+           text-align: right;
+       }
+   
+       .btn{
+           background-color: yellow;
+           color: black;
+           border:  none;
+           padding: 8px 12px;
+           border-radius: 5px;
+           cursor: pointer;
+           transition: background-color 0.3 ease-in-out;
+       }
+   
+       .btn:hover{
+           background-color: black;
+           color: yellow;
+       }
+
+       /* Refrence: W3 Schools, 2024. Learn to Code. [Online] 
+  Available at: https://www.w3schools.com 
+  [Accessed September 2024].
+  Geeks for Geeks, 2008. Data Structure & Algorithms. [Online] 
+  Available at: https://www.geeksforgeeks.org
+  [Accessed September 2024].
+  Udacity, 2011. Introduction to Javascript. [Online] 
+  Available at: https://www.udacity.com/course/intro-to-javascript--cd2073
+  [Accessed September 2024].
+  Code Academy, 2011. HTML & CSS. [Online] 
+  Available at: https://www.codecademy.com/?g_network=g&g_productchannel=&g_adid=528849219280&g_locinterest=&g_keyword=codecademy&g_acctid=243-039-7011&g_adtype=&g_keywordid=kwd-41065460761&g_ifcreative=&g_campaign=account&g_locphysical=9053244&g_adgroupid=70492864474&g_
+  [Accessed September 2024].*/
+  
+    </style>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="HomePage.html">Home page</a> </li>
+            <li><a href="Courses.html">Courses</li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    
+    <div class="contact-info">
+        <h2>General Contact</h2>
+        <p>Email: <a href="EmpoweringTheNation@gmail.com">EmpoweringTheNation@gmail.com</a></p>
+        <p>Phone: <a href="tel: +27 (82) 653 5454">+27 (82) 653 5454</a></p>
+    </div>
+
+    <div class="venues">
+        <h2>Our Venues</h2>
+        <div class="venue">
+            <h3>Venue 1</h3>
+            <p class="venue-address" onclick="showDirections('Our Lady of Lebanon Catholic Church - 8 Blougom Cres, Liefde en Vrede, Johannesburg South, 2190')">Our Lady of Lebanon Catholic Church - 8 Blougom Cres, Liefde en Vrede, Johannesburg South, 2190</p>
+        </div>
+        <div class="venue">
+            <h3>Venue 2</h3>
+            <p class="venue-address" onclick="showDirections('UJ (Auckland Park Campus) - Corner kingsway and University Road, Auckland Park, Johannesburg 2029')">UJ (Auckland Park Campus) - Corner kingsway and University Road, Auckland Park, Johannesburg 2029</p>
+        </div>
+        <div class="venue">
+            <h3>Venue 3</h3>
+            <p class="venue-address" onclick="showDirections('Jan Smuts Scouts Hall - Beech Ave, Mararis Steyn Park, Edenvale, 1609')">jan Smuts Scouts Hall - Beech Ave, Mararis Steyn Park, Edenvale, 1609</p>
+        </div>
+    </div>
+
+    <h2>Directions</h2>
+    <div id="map"></div>
+
+    <script>
+        let map;
+        let directionsService;
+        let directionsRenderer;
+
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {lat: 40.7128, lng: -74.0060},
+                zoom: 13
+            });
+
+            directionsService = new google.maps.DirectionsService();
+            directionsRenderer = new google.maps.DirectionsRenderer();
+            directionsRenderer.setMap(map);
+        }
+
+        function showDirections(destination) {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const origin = new google.maps.LatLng(
+                            position.coords.latitude,
+                            position.coords.longitude
+                        );
+                        calculateAndDisplayRoute(origin, destination);
+                    },
+                    () => {
+                        alert("Error: The Geolocation service failed.");
+                    }
+                );
+            } else {
+                alert("Error: Your browser doesn't support geolocation.");
+            }
+        }
+
+        function calculateAndDisplayRoute(origin, destination) {
+            directionsService.route(
+                {
+                    origin: origin,
+                    destination: destination,
+                    travelMode: 'DRIVING'
+                },
+                (response, status) => {
+                    if (status === 'OK') {
+                        directionsRenderer.setDirections(response);
+                    } else {
+                        window.alert('Directions request failed due to ' + status);
+                    }
+                }
+            );
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>

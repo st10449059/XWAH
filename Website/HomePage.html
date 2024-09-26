@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+         body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+        display: flex;
+        position: sticky;
+        align-items: center;
+        justify-content: space-between;
+        top:0px;
+        background: black;
+        background-blend-mode: darken;
+        background-size: cover;
+        color: white;
+        padding: 10px 20px;
+    }
+
+    .nav-list {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-list li {
+        margin-right: 20px;
+    }
+
+    .nav-list li:last-child{
+        margin-right: 0;
+    }
+
+    .nav-list li a{
+        text-decoration: none ;
+        color: white;
+        font-size: 18px;
+        transition: color 0.3 ease-in-out;
+    }
+
+    .nav-list li a:hover{
+        color: yellow;
+    }
+
+    .rightNav{
+        text-align: right;
+    }
+
+    .btn{
+        background-color: yellow;
+        color: black;
+        border:  none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3 ease-in-out;
+    }
+
+    .btn:hover{
+        background-color: black;
+        color: yellow;
+
+    }
+    .center1{
+        text-align: center;
+        background-color: gold;
+        width: 50%;
+        border: 15px gold;
+        padding: 10px;
+        margin: auto;
+    }
+   
+    h1{
+        text-align: center;
+        color: white;
+    }
+    h2{
+        text-align: center;
+        color: white;
+    }
+
+    .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; 
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+}
+.background{
+    background-color: black;
+
+}
+.button1 {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 1%;
+}
+body {
+  font-family: Arial;
+  margin: 0;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+ /* Refrence: W3 Schools, 2024. Learn to Code. [Online] 
+  Available at: https://www.w3schools.com 
+  [Accessed September 2024].
+  Geeks for Geeks, 2008. Data Structure & Algorithms. [Online] 
+  Available at: https://www.geeksforgeeks.org
+  [Accessed September 2024].
+  Udacity, 2011. Introduction to Javascript. [Online] 
+  Available at: https://www.udacity.com/course/intro-to-javascript--cd2073
+  [Accessed September 2024].
+  Code Academy, 2011. HTML & CSS. [Online] 
+  Available at: https://www.codecademy.com/?g_network=g&g_productchannel=&g_adid=528849219280&g_locinterest=&g_keyword=codecademy&g_acctid=243-039-7011&g_adtype=&g_keywordid=kwd-41065460761&g_ifcreative=&g_campaign=account&g_locphysical=9053244&g_adgroupid=70492864474&g_
+  [Accessed September 2024].
+ 
+*/
+
+    </style>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="HomePage.html">Home Page</a></li>
+            <li><a href="Courses.html">Courses</a> </li>
+            <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="Cart.html">Cart</a></li>
+        </ul>
+    </nav>
+    </style>
+</head>
+<body>
+    <img src="./_Images/EP.png" alt="Empowering the Nation logo">
+    <P>
+        <h1>
+            Description
+        </h1>
+    </P>
+    <p>
+    <div class="center1">
+        Empowering the Nation, founded in 2018, has made significant strides in enhancing the lives of domestic workers and gardeners in Johannesburg through comprehensive training programs. The organization offers a range of educational opportunities designed to equip participants with essential skills that can improve their employability and empower them in their personal and professional lives. Empowering the Nation has successfully trained hundreds of individuals, helping them transition to better job opportunities and improve their livelihoods. The organization not only prioritizes skill development but also promotes a sense of community and support among participants. Through workshops, networking events, and mentorship, trainees can connect with peers and industry professionals, further expanding their horizons.
+    </div>
+    </p>
+    <P>
+        <h1>
+            6 week courses
+        </h1>
+    </P>
+    <P>
+    <div class="center1">
+        The six-month Learnerships provide an in-depth curriculum covering various aspects of domestic work and gardening. Participants engage in practical training alongside theoretical lessons, which not only boosts their skill sets but also fosters confidence and independence. These learnerships are tailored to meet the specific needs of the job market, ensuring that graduates are well-prepared for employment in a competitive environment.
+    </div>
+    </P>
+    <P>
+        <h1>
+            6 month courses
+        </h1>
+    </P>
+    <P>
+    <div class="center1">
+        Empowering the Nation also offers six-week Short Skills Training Programmes. These condensed courses focus on specific skills that are in high demand, allowing participants to quickly gain knowledge that can be immediately applied in their work. Topics may include advanced cleaning techniques, sustainable gardening practices, and basic financial management, all aimed at enhancing the overall effectiveness and marketability of the trainees.
+    </div>
+    </P>
+
+    <h2>Click here to view the courses</h2>
+   
+    <div class="center">
+        <button class="button1">
+            <a href="Courses.html">
+                Click Here
+            </a>
+        </button>
+    </div>
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("demo");
+          let captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        </script>
+    <h2 >Slideshow Gallery</h2>
+
+    <div class="container">
+      <div class="mySlides">
+        <div class="numbertext">1 / 6</div>
+        <img src="./_Images/help1.jpg" alt="help1" >
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">2 / 6</div>
+        <img src="./_Images/help2.jpg"  alt="help1" >
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">3 / 6</div>
+        <img src="./_Images/help3.jpg"  alt="help1">
+      </div>
+        
+      <div class="mySlides">
+        <div class="numbertext">4 / 6</div>
+        <img src="./_Images/help4.jpg"  alt="help1" >
+      </div>
+    
+      <div class="mySlides">
+        <div class="numbertext">5 / 6</div>
+        <img src="./_Images/help5.jpg"  alt="help1" >
+      </div>
+        
+      <div class="mySlides">
+        <div class="numbertext">6 / 6</div>
+        <img src="./_Images/help6.jpg"  alt="help1" >
+      </div>
+        
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+    
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    
+      <div class="row">
+        <div class="column">
+          <img class="demo cursor" src="./_Images/help1.jpg" alt="help1"  onclick="currentSlide(1)" alt="Cooking classes">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./_Images/help2.jpg" alt="help1"  onclick="currentSlide(2)" alt="Sewing classes">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./_Images/help3.jpg" alt="help1" onclick="currentSlide(3)" alt="Gardening classes">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./_Images/help4.jpg" alt="help1" onclick="currentSlide(4)" alt="Life skill classes">
+        </div>
+        <div class="column">
+          <img class="demo cursor" src="./_Images/help5.jpg" alt="help1" onclick="currentSlide(5)" alt="Class Mates bonding">
+        </div>    
+        <div class="column">
+          <img class="demo cursor" src="./_Images/help6.jpg" alt="help1" onclick="currentSlide(6)" alt="Class mates bonding">
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
